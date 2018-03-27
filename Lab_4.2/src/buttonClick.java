@@ -1,5 +1,5 @@
 
-import java.awt.Label;
+
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -20,13 +20,12 @@ public class buttonClick extends Application {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
-        private int counter = 0;
-        private Label label = new Label("Count: ");
- //sdgd
+        int counter = 0;
+       
             @Override
-            public void handle(ActionEvent event) {
-            	label.setText("pressed:" + counter +"time(s)");        
-        		System.out.println("Hello World!");
+            public void handle(ActionEvent event) {        
+        		System.out.println("Hello World!"+ counter);
+        		counter++;
             }
         });
         
@@ -35,8 +34,5 @@ public class buttonClick extends Application {
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
     }
-    public void counter()
-    {
-    	counter++;
-    }
+   
 }
