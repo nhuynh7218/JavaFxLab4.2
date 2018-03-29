@@ -9,7 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
- 
+
+
 public class buttonClick extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -21,18 +22,17 @@ public class buttonClick extends Application {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         Label lbl = new Label();
-        lbl.setLayoutX(70);
-        lbl.setLayoutY(150);
         btn.setOnAction(new EventHandler<ActionEvent>() 
         {
-        	int counter = 0;
+        	int counter = 1;
        
             @Override
             	public void handle(ActionEvent event) 
             	{        
         			System.out.println("Hello World!"+ counter);
         			counter++;
-        			lbl.setText("Score: "+counter);
+        			lbl.setText("Score: "+ counter);
+        			
             	}
         });
         
