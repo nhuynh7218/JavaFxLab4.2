@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
  
-public class buttonClick extends Application {
+public class ButtonClick extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -30,10 +30,11 @@ public class buttonClick extends Application {
             @Override
             	public void handle(ActionEvent event) 
             	{        
-        			System.out.println("Hello World!"+ counter);
+        			System.out.println("Hello World!");
         			counter++;
-        			lbl.setText("Score: "+counter);
+        			lbl.setText("Score: "+ counter);
             	}
+            
         });
         
         StackPane root = new StackPane();
